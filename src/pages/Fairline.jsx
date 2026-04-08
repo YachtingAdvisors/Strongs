@@ -2,13 +2,13 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Anchor, Compass, Ship, Wrench } from "lucide-react";
 
-const heroImg = "https://cdn.mdsbrand.com/mean-strongs-marine/yacht-buyer/yacht-buyer-img-1.webp";
-const heritageImg = "https://cdn.mdsbrand.com/mean-strongs-marine/yacht-buyer/yacht-buyer-img-5.webp";
-const phantom65Img = "https://cdn.callersiq.com/inventory_uploads/attachment-1724943670109438022866d08d36da501.jpg";
-const targa63Img = "https://images.boatsgroup.com/images/1/3/44/2015-fairline-targa-62-gt-power-9610344-20241112112802969-1_XLARGE.jpg";
+const heroImg = "https://image.yachtbuyer.com/w1920/h1200/qh/ca/m6/k71e55d0b/model/photo/770744.jpg";
+const heritageImg = "https://image.yachtbuyer.com/w1920/h1439/qh/ca/m6/ke9632aee/model/photo/2033835.jpg";
+const phantom65Img = "https://image.yachtbuyer.com/w1920/h1280/qh/ca/m6/k1aee8d80/model/photo/2033792.jpg";
+const targa63Img = "https://image.yachtbuyer.com/w1920/h1073/qh/ca/m6/k12b15b44/model/photo/770738.jpg";
 const squadron68Img = "https://cdn.mdsbrand.com/mean-strongs-marine/eventsNew/Squadron%2B68%2BExterior%2B022-1200x800-5b2df79+(1).webp";
 
-const phantom50Img = "https://cdn.callersiq.com/inventory_uploads/attachment-1724943667191627881966d08d33ea710.jpg";
+const phantom50Img = "https://image.yachtbuyer.com/w1920/h1280/qh/ca/m6/k68e63ca4/model/photo/2033799.jpg";
 
 export default function Fairline() {
   return (

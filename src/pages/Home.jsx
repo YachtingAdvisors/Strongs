@@ -2,13 +2,13 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { History, ShieldCheck, MapPin, PlayCircle, Diamond, Wrench, ArrowRight } from "lucide-react";
 
-// Real images from Strong's Marine CDN and inventory
-const heroImg = "https://cdn.mdsbrand.com/mean-strongs-marine/yacht-buyer/yacht-buyer-img-1.webp";
-const yacht1 = "https://cdn.mdsbrand.com/mean-strongs-marine/yacht-buyer/yacht-buyer-img-3.webp"; // Pearl
-const yacht2 = "https://cdn.mdsbrand.com/mean-strongs-marine/yacht-buyer/yacht-buyer-img-2.webp"; // Fairline
-const yacht4 = "https://images.boatsgroup.com/images/1/99/12/2021-cruisers-yachts-54-cantius-power-9939912-20250909133752354-1.jpg"; // Cruisers
+// Real images from manufacturer websites and Strong's Marine CDN
+const heroImg = "https://www.pearlyachts.com/wp-content/uploads/2025/02/home-slide-01.jpg";
+const yacht1 = "https://www.pearlyachts.com/wp-content/uploads/2024/11/Pearl-82-Running-2.jpg"; // Pearl
+const yacht2 = "https://image.yachtbuyer.com/w1920/h1280/qh/ca/m6/k1aee8d80/model/photo/2033792.jpg"; // Fairline
+const yacht4 = "https://www.cruisersyachts.com/-/media/images/cruisers-yatchs/cards/1-2-col-card-row/gls-hp-card.jpg"; // Cruisers
 const pearlInterior = "https://cdn.mdsbrand.com/mean-strongs-marine/yacht-buyer/yacht-buyer-img-5.webp";
-const droneShot = "https://cdn.mdsbrand.com/mean-strongs-marine/yacht-buyer/yacht-buyer-img-4.webp";
+const droneShot = "https://www.cruisersyachts.com/-/media/images/cruisers-yatchs/og/50-fly-launch-og.jpg";
 
 export default function Home() {
   return (

@@ -2,12 +2,12 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Anchor, Gauge, ShieldCheck, Flag } from "lucide-react";
 
-const heroImg = "https://images.boatsgroup.com/images/1/99/12/2021-cruisers-yachts-54-cantius-power-9939912-20250909133752354-1.jpg";
-const storyImg = "https://cdn.mdsbrand.com/mean-strongs-marine/megamenu/cruiserimage.png";
-const model1 = "https://images.boatsgroup.com/images/1/12/63/2022-cruisers-yachts-54-cantius-power-10101263-20260305100648427-1.jpg";
-const model2 = "https://images.boatsgroup.com/images/1/99/12/2021-cruisers-yachts-54-cantius-power-9939912-20250909133752354-1.jpg";
-const model3 = "https://cdn.mdsbrand.com/mean-strongs-marine/yacht-buyer/yacht-buyer-img-2.webp";
-const model4 = "https://cdn.mdsbrand.com/mean-strongs-marine/megamenu/exp-img-1.webp";
+const heroImg = "https://www.cruisersyachts.com/-/media/images/cruisers-yatchs/og/50-fly-launch-og.jpg";
+const storyImg = "https://www.cruisersyachts.com/-/media/images/cruisers-yatchs/cards/1-2-col-card-row/cantius-hp-card.jpg";
+const model1 = "https://www.cruisersyachts.com/-/media/images/cruisers-yatchs/cards/1-2-col-card-row/gls-hp-card.jpg";
+const model2 = "https://www.cruisersyachts.com/-/media/images/cruisers-yatchs/models/50-cantius/thumbnail/50-cantius-modelimagenormal-03242023.jpg";
+const model3 = "https://www.cruisersyachts.com/-/media/images/cruisers-yatchs/models/60-cantius/thumbnail/60c-modelimagelifestyle-04192923.jpg";
+const model4 = "https://www.cruisersyachts.com/-/media/images/cruisers-yatchs/og/50-fly-launch-og.jpg";
 
 const models = [
   { img: model1, title: "Cruisers 42 GLS", className: "md:col-span-7", h: "h-[480px] md:h-[600px]" },

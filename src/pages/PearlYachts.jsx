@@ -3,13 +3,13 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ArrowRight } from "lucide-react";
 
-const heroImg = "https://cdn.mdsbrand.com/mean-strongs-marine/yacht-buyer/yacht-buyer-img-3.webp";
-const atelierImg = "https://cdn.mdsbrand.com/mean-strongs-marine/yacht-buyer/yacht-buyer-img-5.webp";
-const pearl100 = "https://cdn.mdsbrand.com/mean-strongs-marine/yacht-buyer/yacht-buyer-img-6.webp";
-const pearl63 = "https://cdn.mdsbrand.com/mean-strongs-marine/yacht-buyer/yacht-buyer-img-7.webp";
-const pearl82 = "https://cdn.mdsbrand.com/mean-strongs-marine/yacht-buyer/yacht-buyer-img-8.webp";
-const pearl73 = "https://cdn.mdsbrand.com/mean-strongs-marine/yacht-buyer/yacht-buyer-img-4.webp";
-const engineImg = "https://cdn.mdsbrand.com/mean-strongs-marine/megamenu/service-img-1.webp";
+const heroImg = "https://www.pearlyachts.com/wp-content/uploads/2025/02/home-slide-01.jpg";
+const atelierImg = "https://www.pearlyachts.com/wp-content/uploads/2025/02/home-slide-02.jpg";
+const pearl100 = "https://www.pearlyachts.com/wp-content/uploads/2025/02/home-slide-03.jpg";
+const pearl63 = "https://www.pearlyachts.com/wp-content/uploads/2025/02/63-barca.png";
+const pearl82 = "https://www.pearlyachts.com/wp-content/uploads/2024/11/Pearl-82-Running-2.jpg";
+const pearl73 = "https://www.pearlyachts.com/wp-content/uploads/2026/01/Pearl-73_Exterior_Side.jpg";
+const engineImg = "https://www.pearlyachts.com/wp-content/uploads/2020/12/PEARL-82-DRONE-203.jpeg";
 
 export default function PearlYachts() {
   return (

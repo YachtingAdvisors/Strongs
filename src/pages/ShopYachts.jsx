@@ -39,7 +39,7 @@ const listings = [
     cabins: 3,
     engine: "Twin MTU M96L",
     condition: "Pre-Owned",
-    img: "https://images.boatsgroup.com/images/1/93/69/2020-sunseeker-predator-74-xps-power-9669369-20250130064026142-1_XLARGE.jpg",
+    img: "https://images.boatsgroup.com/images/1/6/54/2016-sunseeker-manhattan-65-power-9560654-20240925074526805-1_XLARGE.jpg",
   },
   {
     id: "azimut-50",
@@ -51,7 +51,7 @@ const listings = [
     cabins: 3,
     engine: "Twin Volvo Penta D8",
     condition: "New",
-    img: "https://images.boatsgroup.com/images/1/79/13/2019-azimut-atlantis-51-power-9817913-20250602164519112-1_XLARGE.jpg",
+    img: "https://images.boatsgroup.com/images/1/98/23/2015-azimut-atlantis-50-power-10089823-20260220141926958-1.jpg",
   },
   {
     id: "princess-v55",
@@ -63,7 +63,7 @@ const listings = [
     cabins: 3,
     engine: "Twin Volvo Penta IPS 950",
     condition: "New",
-    img: "https://images.boatsgroup.com/images/1/76/83/2017-princess-56-power-9727683-20250325120120769-1_XLARGE.jpg",
+    img: "https://images.boatsgroup.com/images/1/12/58/2017-princess-56-power-10091258-20260223063308309-3.jpg",
   },
   {
     id: "pearl-63",
@@ -150,8 +150,8 @@ export default function ShopYachts() {
               <div key={yacht.id} className="group bg-surface-container-low rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-500">
                 <div className="aspect-[4/3] overflow-hidden relative">
                   <img alt={yacht.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src={yacht.img} />
-                  <span className={`absolute top-4 left-4 px-3 py-1 rounded text-[10px] font-bold uppercase tracking-widest ${
-                    yacht.condition === "New" ? "bg-secondary text-white" : "bg-white/90 text-on-surface"
+                  <span className={`absolute top-4 left-4 px-3 py-1.5 rounded text-[10px] font-bold uppercase tracking-widest shadow-md ${
+                    yacht.condition === "New" ? "bg-secondary text-white" : "bg-on-primary-fixed text-white"
                   }`}>
                     {yacht.condition}
                   </span>

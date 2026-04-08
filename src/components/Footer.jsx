@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="bg-slate-50 border-t-0">
       <div className="max-w-7xl mx-auto px-6 md:px-12 py-20 flex flex-col items-center space-y-8">
         <Link to="/" className="flex items-center justify-center">
-          <img src="https://cdn.mdsbrand.com/mean-strongs-yachts/assets/images/YachNewlogo.png" alt="Strong's Marine" className="h-10 w-auto" />
+          <img src="https://cdn.mdsbrand.com/mean-strongs-marine/yacht-buyer/yacht-buyer-img-5.webp" alt="Strong's Marine" className="h-10 w-auto" />
         </Link>
         <div className="flex flex-wrap justify-center gap-8">
           {["Privacy Policy", "Terms of Service", "Accessibility", "Careers"].map((item) => (

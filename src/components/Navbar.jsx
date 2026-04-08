@@ -20,7 +20,7 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 w-full z-50 glass-nav shadow-sm flex justify-between items-center px-6 md:px-12 py-5">
       <Link to="/" className="flex items-center">
-        <img src="https://cdn.mdsbrand.com/mean-strongs-yachts/assets/images/YachNewlogo.png" alt="Strong's Marine" className="h-10 md:h-12 w-auto brightness-0" />
+        <img src="https://cdn.mdsbrand.com/mean-strongs-marine/yacht-buyer/yacht-buyer-img-5.webp" alt="Strong's Marine" className="h-10 md:h-12 w-auto" />
       </Link>
 
       <div className="hidden lg:flex items-center space-x-8">

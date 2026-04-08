@@ -7,7 +7,7 @@ const heroImg = "https://www.pearlyachts.com/wp-content/uploads/2025/02/home-sli
 const yacht1 = "https://www.pearlyachts.com/wp-content/uploads/2024/11/Pearl-82-Running-2.jpg"; // Pearl
 const yacht2 = "https://image.yachtbuyer.com/w1920/h1280/qh/ca/m6/k1aee8d80/model/photo/2033792.jpg"; // Fairline
 const yacht4 = "https://www.cruisersyachts.com/-/media/images/cruisers-yatchs/cards/1-2-col-card-row/gls-hp-card.jpg"; // Cruisers
-const pearlInterior = "https://cdn.mdsbrand.com/mean-strongs-marine/yacht-buyer/yacht-buyer-img-5.webp";
+const pearlInterior = "https://www.pearlyachts.com/wp-content/uploads/2026/01/Pearl-73_Aft_Cockpit_Coffee-table.jpg";
 const droneShot = "https://www.cruisersyachts.com/-/media/images/cruisers-yatchs/og/50-fly-launch-og.jpg";
 
 export default function Home() {
@@ -116,7 +116,7 @@ export default function Home() {
               <FeatureItem icon={<Wrench className="w-5 h-5 text-secondary" />} title="Boutique Customization" desc="Every Pearl is a unique reflection of its captain's vision." />
             </div>
             <Link to="/pearl-yachts">
-              <Button className="bg-secondary text-white px-10 py-5 rounded font-bold uppercase tracking-widest text-xs hover:bg-white hover:text-on-primary-fixed transition-all duration-300 h-auto">
+              <Button className="!bg-[#b81c35] !text-white px-10 py-5 rounded font-bold uppercase tracking-widest text-xs hover:!bg-white hover:!text-[#141b2c] transition-all duration-300 h-auto shadow-lg">
                 Discover the Pearl Collection
               </Button>
             </Link>

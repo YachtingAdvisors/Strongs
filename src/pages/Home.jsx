@@ -68,17 +68,8 @@ export default function Home() {
             </div>
             <p className="text-on-surface-variant text-sm max-w-xs text-right hidden md:block">Three world-class brands. One trusted destination.</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <BrandCard
-              className="md:col-span-7"
-              img={yacht1}
-              brand="Pearl Yachts"
-              tagline="Boutique British Excellence"
-              desc="Bespoke interiors by Kelly Hoppen. Artisanal craftsmanship at its finest."
-              href="/pearl-yachts"
-            />
-            <BrandCard
-              className="md:col-span-5"
               img={yacht2}
               brand="Fairline"
               tagline="British Precision Engineering"
@@ -86,13 +77,18 @@ export default function Home() {
               href="/fairline"
             />
             <BrandCard
-              className="md:col-span-12"
               img={yacht4}
               brand="Cruisers Yachts"
               tagline="American Craftsmanship Since 1953"
               desc="Hand-built in Wisconsin. Family-owned heritage meets modern innovation."
               href="/cruisers"
-              wide
+            />
+            <BrandCard
+              img={yacht1}
+              brand="Pearl Yachts"
+              tagline="Boutique British Excellence"
+              desc="Bespoke interiors by Kelly Hoppen. Artisanal craftsmanship at its finest."
+              href="/pearl-yachts"
             />
           </div>
         </div>
@@ -163,10 +159,10 @@ export default function Home() {
   );
 }
 
-function BrandCard({ className, img, brand, tagline, desc, href, wide }) {
+function BrandCard({ className = "", img, brand, tagline, desc, href }) {
   return (
     <Link to={href} className={`${className} group relative overflow-hidden rounded-lg block`}>
-      <div className={`${wide ? "aspect-[21/9]" : "aspect-[4/3]"} overflow-hidden relative`}>
+      <div className="aspect-[3/4] overflow-hidden relative">
         <img alt={brand} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src={img} />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10">

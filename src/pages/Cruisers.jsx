@@ -2,18 +2,12 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Anchor, Gauge, ShieldCheck, Flag } from "lucide-react";
 
-const heroImg =
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuDkmf9l3euQKVuLnGlMauWKnUvsFM7OXvtXoR9hiQi0twi8yZTFYArgyE9i2OGy2Ej-NZxaLn6dI6at8g1SGVlglfc_nPFytQPmrw7JbwRtrwHijDMmEPvKVG6Pf18TSKM-fRmXp689_TDKvNsG8FNsXphDup99lrAHVitRMEBckQBBlaxD1W8sCqgEJ7idtkf2z61khxRuz2QjtN0BQfHWNWr5tLtiMs8XCylF-LkLGOxSmmohjnWSodQjXZcbjZ8onCy1wpzAP5I";
-const storyImg =
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuDynvE48Atu_vWr53UivCvfJhSUQ8C0ho83yV7SZmz1VsYqUXINgvC91ORadKiMlBza3MuajVKNbUzJZXQobO2ByFFshIlFWV708q8jhOdKu2Z5PZRiOLP2fOnVqu4sDPxYWWxdLPYV3oe9AGFX8jxHiRxiOBdAwtBB8xG0gVV5SkY71bDcL8u5NxJ2GznuB-SOM1oT8xjZ33KZ0wwVt-WRZphEY5jaaSm-_gV1AgYLOEhM6fC7UMeW4c946D9xUOb91xsRH3KpFQI";
-const model1 =
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuA_ZPB6kRzZN0M9XI-r6xawWopggKfaMfl0Hv4Y1GS_euOJ4-TaSoMgdpFd4qrQ-X-_5d8c3gitSfBc5NwGVyWvM8FzBR1KLuXbNjw5jyXIQStqoNCYi1cXqunALuu4Y5dF6rDpQhBEbbF3Xa3Re0k52DTvbJxHrQ3wdikJ_sk-lPWwWmcyuHvVO-1f-EU0kDNLiAwE-08WiWmS-dpj--SRWRjWRegaD3Lzi8X0uCOpnnoblPPGAYt-U2iNIz7onj6YFt9TehDS9XY";
-const model2 =
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuA0Whk5tLJyhmZYKmn59iD4PBdQYsfT3O995p2DYb_MWzI2qedx_6QLds2o3FeWs09l3BfFcmNHqKvqQ3zDEXBfKHoypBK5gTs5FUsJ7g7fLVhP7M8wR3xq63P80i6wW2VpFJvOStQ5E_Ljm2IqmM0IPLx7bxGYo5HU8gqDKb45EI84MnxM9vpAO-uflaY6fq_RVFAql8WVqO8thRaV-IXXFHusxwT_aiG17GCjvExOG7WogX0A3c5OQw_bWhEkNsKa7OQdKAcIIvM";
-const model3 =
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuB_x80MSLMmA275XbywnUhdE_0MGUnoajFe6zESbrakUzhsgkI5f-l_OIp4LmVA51J6iOKTf0EZTPRocIm4iDbD0Wl1-IRDsoXvCCEfR_BtJaMCg9z-4JzU01SNC6AmGtfviykWD5BeEvCn9MZoZu4Vx7SDVG8QaCo-t7JjMXgqIW5k5nQscI4njVUvRzMfRKqbBHNkEXj1y4MqpeXx90TaQQ8lUz9sDyym3_qGxlOP_liPo0KPBiuIzWukKxzs28C3gfVQ4MTZ4uQ";
-const model4 =
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuDJMA0kJrZHb6KTXYqLFP8L0n4kfM_3oWgFP9AyFABOx1zzQnJkZjQZ8Pqkb6somnIajYyMf6oI7tLcMckzo6YMbca_6H22Ax9WuE_vMZYUzOLE9btVU9SF-e4q6p-0-28K2L92v6V3RbjVmtu326fXj7sSgZW3ZW47yfmMuWFdx9AshepExdQ1e2OWMUq5dT8bI4TBHr0zCkRSUf7gYVbc4vd16wRMPPTriAizAaz_sKUifOFHvYtGJL5fzHn06tEFwjAoNwCaLSM";
+const heroImg = "https://images.boatsgroup.com/images/1/99/12/2021-cruisers-yachts-54-cantius-power-9939912-20250909133752354-1.jpg";
+const storyImg = "https://cdn.mdsbrand.com/mean-strongs-marine/megamenu/cruiserimage.png";
+const model1 = "https://images.boatsgroup.com/images/1/12/63/2022-cruisers-yachts-54-cantius-power-10101263-20260305100648427-1.jpg";
+const model2 = "https://images.boatsgroup.com/images/1/99/12/2021-cruisers-yachts-54-cantius-power-9939912-20250909133752354-1.jpg";
+const model3 = "https://cdn.mdsbrand.com/mean-strongs-marine/yacht-buyer/yacht-buyer-img-2.webp";
+const model4 = "https://cdn.mdsbrand.com/mean-strongs-marine/megamenu/exp-img-1.webp";
 
 const models = [
   { img: model1, title: "Cruisers 42 GLS", className: "md:col-span-7", h: "h-[480px] md:h-[600px]" },

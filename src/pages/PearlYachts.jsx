@@ -3,13 +3,13 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ArrowRight } from "lucide-react";
 
-const heroImg = "https://lh3.googleusercontent.com/aida-public/AB6AXuAu6ZD6-D9XqFm_h5TtPVd9AgWu39-agE3aUvdt7qMQH9OgsYhcLBbhuhre6s0kti236rnURKGt6Dnfi1Hw4AreeexDO-y1Ei9PJCdgfmhM3YYyJiK9vgdVfFogZerFnoQOIFHq64DK7kzHX8wK0WmxXWZlQMvMR-hKHmBcu8zypSGWbbyg23DmHdlVBtSQX3kLLV5YzPHiCSWgCHbP49TOFnUMf_VIvAcD8k6hgwkNEoedoWA-C0fC6vhtvxkYyRbWyH0PE9mi_qg";
-const atelierImg = "https://lh3.googleusercontent.com/aida-public/AB6AXuA8I6HbKRXrnhwPjCHqAoljRcEZsw10hxEInLQjmye5py_vwfCCx64020ZtdBryXPe1-F7kNsmZ_sqZozzuuydjnzfpu1DYhEtWyh4BJH1A2Vi3SjKzkC4tD5Kfvrm5DZ1u4uXEwptW1kM12a4cBd4Wz_ajzHxElP8tsIeYueFxHBiemcMoA_QCrOSwHsRY_vDbWoj2g9x48LygeReEQOVjX8kfgTTkyK56swEvfuHa2muP6Tbp3MiJSa91SOR-UVe2Pbat_lzhV_Y";
-const pearl100 = "https://lh3.googleusercontent.com/aida-public/AB6AXuA_ZPB6kRzZN0M9XI-r6xawWopggKfaMfl0Hv4Y1GS_euOJ4-TaSoMgdpFd4qrQ-X-_5d8c3gitSfBc5NwGVyWvM8FzBR1KLuXbNjw5jyXIQStqoNCYi1cXqunALuu4Y5dF6rDpQhBEbbF3Xa3Re0k52DTvbJxHrQ3wdikJ_sk-lPWwWmcyuHvVO-1f-EU0kDNLiAwE-08WiWmS-dpj--SRWRjWRegaD3Lzi8X0uCOpnnoblPPGAYt-U2iNIz7onj6YFt9TehDS9XY";
-const pearl63 = "https://lh3.googleusercontent.com/aida-public/AB6AXuA0Whk5tLJyhmZYKmn59iD4PBdQYsfT3O995p2DYb_MWzI2qedx_6QLds2o3FeWs09l3BfFcmNHqKvqQ3zDEXBfKHoypBK5gTs5FUsJ7g7fLVhP7M8wR3xq63P80i6wW2VpFJvOStQ5E_Ljm2IqmM0IPLx7bxGYo5HU8gqDKb45EI84MnxM9vpAO-uflaY6fq_RVFAql8WVqO8thRaV-IXXFHusxwT_aiG17GCjvExOG7WogX0A3c5OQw_bWhEkNsKa7OQdKAcIIvM";
-const pearl82 = "https://lh3.googleusercontent.com/aida-public/AB6AXuB_x80MSLMmA275XbywnUhdE_0MGUnoajFe6zESbrakUzhsgkI5f-l_OIp4LmVA51J6iOKTf0EZTPRocIm4iDbD0Wl1-IRDsoXvCCEfR_BtJaMCg9z-4JzU01SNC6AmGtfviykWD5BeEvCn9MZoZu4Vx7SDVG8QaCo-t7JjMXgqIW5k5nQscI4njVUvRzMfRKqbBHNkEXj1y4MqpeXx90TaQQ8lUz9sDyym3_qGxlOP_liPo0KPBiuIzWukKxzs28C3gfVQ4MTZ4uQ";
-const pearl73 = "https://lh3.googleusercontent.com/aida-public/AB6AXuDJMA0kJrZHb6KTXYqLFP8L0n4kfM_3oWgFP9AyFABOx1zzQnJkZjQZ8Pqkb6somnIajYyMf6oI7tLcMckzo6YMbca_6H22Ax9WuE_vMZYUzOLE9btVU9SF-e4q6p-0-28K2L92v6V3RbjVmtu326fXj7sSgZW3ZW47yfmMuWFdx9AshepExdQ1e2OWMUq5dT8bI4TBHr0zCkRSUf7gYVbc4vd16wRMPPTriAizAaz_sKUifOFHvYtGJL5fzHn06tEFwjAoNwCaLSM";
-const engineImg = "https://lh3.googleusercontent.com/aida-public/AB6AXuApDjO62yJBMsUFScYJMe0BLzu-2gVSK2cIL1wMUB5gj04lmc8bCr-ic1vARw-GLdDyi4g6b_N1mrtL9QyRDfkNrr52dstrtRNc0nrsnlJqwiR70CHGiDyDyFpPZU_k0Meo73u2gKxs9hn6Zkr8iT6htlhRuztWX4bqhJHW6LdxDNRc0j0Ouaky-s0Xb7vOomA95Tx4eQMI9uTdn5WzEf26cxMWNBE2ESxfY6iR2DC2lQlGyFourhkFTrKg3kTbTPTtVDQ1cglg2Ac";
+const heroImg = "https://cdn.mdsbrand.com/mean-strongs-marine/yacht-buyer/yacht-buyer-img-3.webp";
+const atelierImg = "https://cdn.mdsbrand.com/mean-strongs-marine/yacht-buyer/yacht-buyer-img-5.webp";
+const pearl100 = "https://cdn.mdsbrand.com/mean-strongs-marine/yacht-buyer/yacht-buyer-img-6.webp";
+const pearl63 = "https://cdn.mdsbrand.com/mean-strongs-marine/yacht-buyer/yacht-buyer-img-7.webp";
+const pearl82 = "https://cdn.mdsbrand.com/mean-strongs-marine/yacht-buyer/yacht-buyer-img-8.webp";
+const pearl73 = "https://cdn.mdsbrand.com/mean-strongs-marine/yacht-buyer/yacht-buyer-img-4.webp";
+const engineImg = "https://cdn.mdsbrand.com/mean-strongs-marine/megamenu/service-img-1.webp";
 
 export default function PearlYachts() {
   return (

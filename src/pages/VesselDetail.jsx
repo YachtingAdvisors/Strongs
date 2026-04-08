@@ -21,10 +21,10 @@ import {
 } from "lucide-react";
 
 const images = [
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuBuMIagXq4QbZSLc0R6wkN79zLV6wzS2tY3b_IvcxYeGyBWLapd6l6ZllRLwf5Mhu5M5fkIrkVOPYXo8ISERZqxis3z2l2f3b1mShk_oJROtjZs3Y0ouum5klwZYneYE2GFIx0xvatWoXggDTPMUxl_XtucI5QKOGlMZvbHuEP7eIPRLgeOPIELvdfMkRiL_j_ORzElwAowt5dLfMD0JXPiCbQfwZJ1NgZelzDLzIQQlzuGk7XsRsRW165r_hnTgNaQNnEWXa4DIBk",
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuCd4_sK9F-cp4rBp7llRVrAohIKRYnD1dQUo0euIXuoTR1eXwP9_xB3TWEd7etp0i1xjsUTk1u05WPBPj5UZFyf87g1nm4MForPE7Zc2EF1x4i5iuS_sNCsbo-Vwkznebj2HSVHGT0dSNqe-puABiDrrIaK3TplSLwgQz2SFUm6GFVvmgSzqYRIxfmmacOD6KO81hcpR5esvrKQS5VN85kG1Wy3mzHiMMg4TC0HcJBJ9r2rRYX5zVmmaGeGpjGsHRmf-zfqvWkeMYY",
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuCVKsa1NuvUI7x_iUzVBfLguWc6gvdcD3rLhETzhChZuoB-vFN8ajh8NdeoWl-3-3gWDwcaZfUH7i673lPiGMFF2VbTygdVMaKxcEcHXFqXybuI0tzyLi-IXTG_jD-WZF6eY2RBRFiMQ_igQqwrIPwi1u_ZjgYZbRtUBxJ3zDMFeOGvbdup5jOI-HDstS4bBzxKqAyDhNW1nb29OeOdAgXIP_m_YhRZ3e5BMcFJ1yHzE3OWhhxbs-KDv83f1H2oeh5pzsLJCxnzT64",
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuDynvE48Atu_vWr53UivCvfJhSUQ8C0ho83yV7SZmz1VsYqUXINgvC91ORadKiMlBza3MuajVKNbUzJZXQobO2ByFFshIlFWV708q8jhOdKu2Z5PZRiOLP2fOnVqu4sDPxYWWxdLPYV3oe9AGFX8jxHiRxiOBdAwtBB8xG0gVV5SkY71bDcL8u5NxJ2GznuB-SOM1oT8xjZ33KZ0wwVt-WRZphEY5jaaSm-_gV1AgYLOEhM6fC7UMeW4c946D9xUOb91xsRH3KpFQI",
+  "https://cdn.callersiq.com/inventory_uploads/attachment-1724943670109438022866d08d36da501.jpg",
+  "https://cdn.callersiq.com/inventory_uploads/attachment-1724943667191627881966d08d33ea710.jpg",
+  "https://cdn.callersiq.com/inventory_uploads/attachment-17249436726248447766d08d38bd7dc.jpg",
+  "https://cdn.callersiq.com/inventory_uploads/attachment-1724943668129407650366d08d348978e.jpg",
 ];
 
 const specifications = [

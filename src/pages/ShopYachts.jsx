@@ -14,7 +14,7 @@ const listings = [
     cabins: 3,
     engine: "Twin Volvo Penta IPS 1200",
     condition: "New",
-    img: "https://lh3.googleusercontent.com/aida-public/AB6AXuBuMIagXq4QbZSLc0R6wkN79zLV6wzS2tY3b_IvcxYeGyBWLapd6l6ZllRLwf5Mhu5M5fkIrkVOPYXo8ISERZqxis3z2l2f3b1mShk_oJROtjZs3Y0ouum5klwZYneYE2GFIx0xvatWoXggDTPMUxl_XtucI5QKOGlMZvbHuEP7eIPRLgeOPIELvdfMkRiL_j_ORzElwAowt5dLfMD0JXPiCbQfwZJ1NgZelzDLzIQQlzuGk7XsRsRW165r_hnTgNaQNnEWXa4DIBk",
+    img: "https://cdn.callersiq.com/inventory_uploads/attachment-1724943670109438022866d08d36da501.jpg",
     hasDetail: true,
   },
   {
@@ -27,7 +27,7 @@ const listings = [
     cabins: 4,
     engine: "Twin MAN V12",
     condition: "New",
-    img: "https://lh3.googleusercontent.com/aida-public/AB6AXuA_ZPB6kRzZN0M9XI-r6xawWopggKfaMfl0Hv4Y1GS_euOJ4-TaSoMgdpFd4qrQ-X-_5d8c3gitSfBc5NwGVyWvM8FzBR1KLuXbNjw5jyXIQStqoNCYi1cXqunALuu4Y5dF6rDpQhBEbbF3Xa3Re0k52DTvbJxHrQ3wdikJ_sk-lPWwWmcyuHvVO-1f-EU0kDNLiAwE-08WiWmS-dpj--SRWRjWRegaD3Lzi8X0uCOpnnoblPPGAYt-U2iNIz7onj6YFt9TehDS9XY",
+    img: "https://cdn.mdsbrand.com/mean-strongs-marine/yacht-buyer/yacht-buyer-img-8.webp",
   },
   {
     id: "sunseeker-65",
@@ -39,7 +39,7 @@ const listings = [
     cabins: 3,
     engine: "Twin MTU M96L",
     condition: "Pre-Owned",
-    img: "https://lh3.googleusercontent.com/aida-public/AB6AXuDkmf9l3euQKVuLnGlMauWKnUvsFM7OXvtXoR9hiQi0twi8yZTFYArgyE9i2OGy2Ej-NZxaLn6dI6at8g1SGVlglfc_nPFytQPmrw7JbwRtrwHijDMmEPvKVG6Pf18TSKM-fRmXp689_TDKvNsG8FNsXphDup99lrAHVitRMEBckQBBlaxD1W8sCqgEJ7idtkf2z61khxRuz2QjtN0BQfHWNWr5tLtiMs8XCylF-LkLGOxSmmohjnWSodQjXZcbjZ8onCy1wpzAP5I",
+    img: "https://images.boatsgroup.com/images/1/93/69/2020-sunseeker-predator-74-xps-power-9669369-20250130064026142-1_XLARGE.jpg",
   },
   {
     id: "azimut-50",
@@ -51,7 +51,7 @@ const listings = [
     cabins: 3,
     engine: "Twin Volvo Penta D8",
     condition: "New",
-    img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCVKsa1NuvUI7x_iUzVBfLguWc6gvdcD3rLhETzhChZuoB-vFN8ajh8NdeoWl-3-3gWDwcaZfUH7i673lPiGMFF2VbTygdVMaKxcEcHXFqXybuI0tzyLi-IXTG_jD-WZF6eY2RBRFiMQ_igQqwrIPwi1u_ZjgYZbRtUBxJ3zDMFeOGvbdup5jOI-HDstS4bBzxKqAyDhNW1nb29OeOdAgXIP_m_YhRZ3e5BMcFJ1yHzE3OWhhxbs-KDv83f1H2oeh5pzsLJCxnzT64",
+    img: "https://images.boatsgroup.com/images/1/79/13/2019-azimut-atlantis-51-power-9817913-20250602164519112-1_XLARGE.jpg",
   },
   {
     id: "princess-v55",
@@ -63,7 +63,7 @@ const listings = [
     cabins: 3,
     engine: "Twin Volvo Penta IPS 950",
     condition: "New",
-    img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCd4_sK9F-cp4rBp7llRVrAohIKRYnD1dQUo0euIXuoTR1eXwP9_xB3TWEd7etp0i1xjsUTk1u05WPBPj5UZFyf87g1nm4MForPE7Zc2EF1x4i5iuS_sNCsbo-Vwkznebj2HSVHGT0dSNqe-puABiDrrIaK3TplSLwgQz2SFUm6GFVvmgSzqYRIxfmmacOD6KO81hcpR5esvrKQS5VN85kG1Wy3mzHiMMg4TC0HcJBJ9r2rRYX5zVmmaGeGpjGsHRmf-zfqvWkeMYY",
+    img: "https://images.boatsgroup.com/images/1/76/83/2017-princess-56-power-9727683-20250325120120769-1_XLARGE.jpg",
   },
   {
     id: "pearl-63",
@@ -75,7 +75,7 @@ const listings = [
     cabins: 3,
     engine: "Twin Volvo Penta IPS 1050",
     condition: "New",
-    img: "https://lh3.googleusercontent.com/aida-public/AB6AXuA0Whk5tLJyhmZYKmn59iD4PBdQYsfT3O995p2DYb_MWzI2qedx_6QLds2o3FeWs09l3BfFcmNHqKvqQ3zDEXBfKHoypBK5gTs5FUsJ7g7fLVhP7M8wR3xq63P80i6wW2VpFJvOStQ5E_Ljm2IqmM0IPLx7bxGYo5HU8gqDKb45EI84MnxM9vpAO-uflaY6fq_RVFAql8WVqO8thRaV-IXXFHusxwT_aiG17GCjvExOG7WogX0A3c5OQw_bWhEkNsKa7OQdKAcIIvM",
+    img: "https://cdn.mdsbrand.com/mean-strongs-marine/yacht-buyer/yacht-buyer-img-7.webp",
   },
 ];
 

@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { History, ShieldCheck, MapPin, PlayCircle, Diamond, Wrench } from "lucide-react";
+import { History, ShieldCheck, MapPin, PlayCircle, Diamond, Wrench, ArrowRight } from "lucide-react";
 
-const heroImg = "https://lh3.googleusercontent.com/aida-public/AB6AXuDaBb-recNpR1aF8Ie6rS15u4i_4WjeEP164XnHyf2PwgreoAnQbrJV-nphf-wroPJLAUMoWUB6yf3b0zHgta5E4MhC6FrbLM6NOTOjg0KDu0il24O9xCdJqps3_iLv25ljvsy3v58pS7LZ5eBzUGfzLLiNkaTpQ0oFtaID_2zkoVU6_V5xaWCO8RbtknHXXKo4FKGMeptrSO1ngvxeY1MsjTsXx0bAY0Ng0I-XyhKymCd-tiQENlydknruYUgcgqAhCUAcgSBvhf4";
-const yacht1 = "https://lh3.googleusercontent.com/aida-public/AB6AXuBuMIagXq4QbZSLc0R6wkN79zLV6wzS2tY3b_IvcxYeGyBWLapd6l6ZllRLwf5Mhu5M5fkIrkVOPYXo8ISERZqxis3z2l2f3b1mShk_oJROtjZs3Y0ouum5klwZYneYE2GFIx0xvatWoXggDTPMUxl_XtucI5QKOGlMZvbHuEP7eIPRLgeOPIELvdfMkRiL_j_ORzElwAowt5dLfMD0JXPiCbQfwZJ1NgZelzDLzIQQlzuGk7XsRsRW165r_hnTgNaQNnEWXa4DIBk";
-const yacht2 = "https://lh3.googleusercontent.com/aida-public/AB6AXuCd4_sK9F-cp4rBp7llRVrAohIKRYnD1dQUo0euIXuoTR1eXwP9_xB3TWEd7etp0i1xjsUTk1u05WPBPj5UZFyf87g1nm4MForPE7Zc2EF1x4i5iuS_sNCsbo-Vwkznebj2HSVHGT0dSNqe-puABiDrrIaK3TplSLwgQz2SFUm6GFVvmgSzqYRIxfmmacOD6KO81hcpR5esvrKQS5VN85kG1Wy3mzHiMMg4TC0HcJBJ9r2rRYX5zVmmaGeGpjGsHRmf-zfqvWkeMYY";
-const yacht3 = "https://lh3.googleusercontent.com/aida-public/AB6AXuCVKsa1NuvUI7x_iUzVBfLguWc6gvdcD3rLhETzhChZuoB-vFN8ajh8NdeoWl-3-3gWDwcaZfUH7i673lPiGMFF2VbTygdVMaKxcEcHXFqXybuI0tzyLi-IXTG_jD-WZF6eY2RBRFiMQ_igQqwrIPwi1u_ZjgYZbRtUBxJ3zDMFeOGvbdup5jOI-HDstS4bBzxKqAyDhNW1nb29OeOdAgXIP_m_YhRZ3e5BMcFJ1yHzE3OWhhxbs-KDv83f1H2oeh5pzsLJCxnzT64";
-const yacht4 = "https://lh3.googleusercontent.com/aida-public/AB6AXuDkmf9l3euQKVuLnGlMauWKnUvsFM7OXvtXoR9hiQi0twi8yZTFYArgyE9i2OGy2Ej-NZxaLn6dI6at8g1SGVlglfc_nPFytQPmrw7JbwRtrwHijDMmEPvKVG6Pf18TSKM-fRmXp689_TDKvNsG8FNsXphDup99lrAHVitRMEBckQBBlaxD1W8sCqgEJ7idtkf2z61khxRuz2QjtN0BQfHWNWr5tLtiMs8XCylF-LkLGOxSmmohjnWSodQjXZcbjZ8onCy1wpzAP5I";
-const pearlInterior = "https://lh3.googleusercontent.com/aida-public/AB6AXuDynvE48Atu_vWr53UivCvfJhSUQ8C0ho83yV7SZmz1VsYqUXINgvC91ORadKiMlBza3MuajVKNbUzJZXQobO2ByFFshIlFWV708q8jhOdKu2Z5PZRiOLP2fOnVqu4sDPxYWWxdLPYV3oe9AGFX8jxHiRxiOBdAwtBB8xG0gVV5SkY71bDcL8u5NxJ2GznuB-SOM1oT8xjZ33KZ0wwVt-WRZphEY5jaaSm-_gV1AgYLOEhM6fC7UMeW4c946D9xUOb91xsRH3KpFQI";
-const droneShot = "https://lh3.googleusercontent.com/aida-public/AB6AXuBGD979AUFyBoOZcg3dpWNCZqEe4Jk1yHKnzajSBL29LeXz6G64pOoVWvL8nkEIHltPYr3wFT-NXeeo7BUqZUZArRoEqZtleFparh1GYYHheP_NjnfIQqvdN07nk0x_lvjg0QaXIgvtbljhlK_VNZT8ew8hIYG_WHIMjUNouwbermOTrka__ORbVedqUJR4GUo34t24rCL96lpjz7ZZtBJbPOYm__-CGBajv0kBqmlEKi52iqAnE7t3zVeCB2CbxunW51e8Pqf_bbA";
+// Real images from Strong's Marine CDN and inventory
+const heroImg = "https://cdn.mdsbrand.com/mean-strongs-marine/yacht-buyer/yacht-buyer-img-1.webp";
+const yacht1 = "https://cdn.mdsbrand.com/mean-strongs-marine/yacht-buyer/yacht-buyer-img-3.webp"; // Pearl
+const yacht2 = "https://cdn.mdsbrand.com/mean-strongs-marine/yacht-buyer/yacht-buyer-img-2.webp"; // Fairline
+const yacht4 = "https://images.boatsgroup.com/images/1/99/12/2021-cruisers-yachts-54-cantius-power-9939912-20250909133752354-1.jpg"; // Cruisers
+const pearlInterior = "https://cdn.mdsbrand.com/mean-strongs-marine/yacht-buyer/yacht-buyer-img-5.webp";
+const droneShot = "https://cdn.mdsbrand.com/mean-strongs-marine/yacht-buyer/yacht-buyer-img-4.webp";
 
 export default function Home() {
   return (
@@ -49,7 +49,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* The Collection */}
+      {/* The Collection — 3 Brands */}
       <section className="py-24 md:py-32 px-6 md:px-12 bg-surface">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-end mb-16 md:mb-20 gap-8">
@@ -57,12 +57,34 @@ export default function Home() {
               <span className="text-secondary font-label font-bold tracking-widest text-xs uppercase mb-4 block">The Collection</span>
               <h2 className="font-headline text-4xl md:text-6xl font-bold tracking-tighter text-on-surface">Curated Fleet</h2>
             </div>
+            <p className="text-on-surface-variant text-sm max-w-xs text-right hidden md:block">Three world-class brands. One trusted destination.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
-            <YachtCard className="md:col-span-8" img={yacht1} title="Sunseeker Predator 65" specs="65ft • 3 Cabins • 35 Knots" aspect="aspect-[16/9]" showDetails />
-            <YachtCard className="md:col-span-4" img={yacht2} title="Fairline Targa 45" specs="45ft • 2 Cabins" aspect="aspect-square" />
-            <YachtCard className="md:col-span-4" img={yacht3} title="Azimut 50 Flybridge" specs="50ft • 3 Cabins" aspect="aspect-square" />
-            <YachtCard className="md:col-span-8" img={yacht4} title="Princess V55" specs="55ft • Sport Performance" aspect="aspect-[16/9]" showDetails />
+            <BrandCard
+              className="md:col-span-7"
+              img={yacht1}
+              brand="Pearl Yachts"
+              tagline="Boutique British Excellence"
+              desc="Bespoke interiors by Kelly Hoppen. Artisanal craftsmanship at its finest."
+              href="/pearl-yachts"
+            />
+            <BrandCard
+              className="md:col-span-5"
+              img={yacht2}
+              brand="Fairline"
+              tagline="British Precision Engineering"
+              desc="55+ years of iconic design by Alberto Mancini, built in Oundle, England."
+              href="/fairline"
+            />
+            <BrandCard
+              className="md:col-span-12"
+              img={yacht4}
+              brand="Cruisers Yachts"
+              tagline="American Craftsmanship Since 1953"
+              desc="Hand-built in Wisconsin. Family-owned heritage meets modern innovation."
+              href="/cruisers"
+              wide
+            />
           </div>
         </div>
       </section>
@@ -132,24 +154,23 @@ export default function Home() {
   );
 }
 
-function YachtCard({ className, img, title, specs, aspect, showDetails }) {
+function BrandCard({ className, img, brand, tagline, desc, href, wide }) {
   return (
-    <div className={`${className} group relative overflow-hidden bg-surface-container-low rounded-lg`}>
-      <div className={`${aspect} overflow-hidden`}>
-        <img alt={title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src={img} />
-      </div>
-      <div className="p-6 md:p-8 flex justify-between items-center">
-        <div>
-          <h3 className="font-headline text-xl md:text-2xl font-bold text-on-surface">{title}</h3>
-          <p className="text-on-surface-variant font-label text-sm mt-1">{specs}</p>
+    <Link to={href} className={`${className} group relative overflow-hidden rounded-lg block`}>
+      <div className={`${wide ? "aspect-[21/9]" : "aspect-[4/3]"} overflow-hidden relative`}>
+        <img alt={brand} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src={img} />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10">
+          <span className="font-label text-[10px] tracking-[0.3em] uppercase text-white/60 block mb-2">{tagline}</span>
+          <h3 className="font-headline text-2xl md:text-4xl font-bold text-white mb-2">{brand}</h3>
+          <p className="text-white/70 text-sm max-w-md mb-4 hidden md:block">{desc}</p>
+          <span className="inline-flex items-center gap-2 font-label text-xs font-bold uppercase tracking-widest text-white border-b border-white/30 pb-1 group-hover:border-secondary group-hover:text-secondary transition-colors">
+            Explore Collection
+            <ArrowRight className="w-4 h-4" />
+          </span>
         </div>
-        {showDetails && (
-          <a className="font-label text-xs font-bold uppercase tracking-widest border-b-2 border-secondary pb-1 hover:text-secondary transition-colors" href="#">
-            View Details
-          </a>
-        )}
       </div>
-    </div>
+    </Link>
   );
 }
 

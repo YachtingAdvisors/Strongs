@@ -2,23 +2,13 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Anchor, Compass, Ship, Wrench } from "lucide-react";
 
-const heroImg =
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuBuMIagXq4QbZSLc0R6wkN79zLV6wzS2tY3b_IvcxYeGyBWLapd6l6ZllRLwf5Mhu5M5fkIrkVOPYXo8ISERZqxis3z2l2f3b1mShk_oJROtjZs3Y0ouum5klwZYneYE2GFIx0xvatWoXggDTPMUxl_XtucI5QKOGlMZvbHuEP7eIPRLgeOPIELvdfMkRiL_j_ORzElwAowt5dLfMD0JXPiCbQfwZJ1NgZelzDLzIQQlzuGk7XsRsRW165r_hnTgNaQNnEWXa4DIBk";
+const heroImg = "https://cdn.mdsbrand.com/mean-strongs-marine/yacht-buyer/yacht-buyer-img-1.webp";
+const heritageImg = "https://cdn.mdsbrand.com/mean-strongs-marine/yacht-buyer/yacht-buyer-img-5.webp";
+const phantom65Img = "https://cdn.callersiq.com/inventory_uploads/attachment-1724943670109438022866d08d36da501.jpg";
+const targa63Img = "https://images.boatsgroup.com/images/1/3/44/2015-fairline-targa-62-gt-power-9610344-20241112112802969-1_XLARGE.jpg";
+const squadron68Img = "https://cdn.mdsbrand.com/mean-strongs-marine/eventsNew/Squadron%2B68%2BExterior%2B022-1200x800-5b2df79+(1).webp";
 
-const heritageImg =
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuCVKsa1NuvUI7x_iUzVBfLguWc6gvdcD3rLhETzhChZuoB-vFN8ajh8NdeoWl-3-3gWDwcaZfUH7i673lPiGMFF2VbTygdVMaKxcEcHXFqXybuI0tzyLi-IXTG_jD-WZF6eY2RBRFiMQ_igQqwrIPwi1u_ZjgYZbRtUBxJ3zDMFeOGvbdup5jOI-HDstS4bBzxKqAyDhNW1nb29OeOdAgXIP_m_YhRZ3e5BMcFJ1yHzE3OWhhxbs-KDv83f1H2oeh5pzsLJCxnzT64";
-
-const phantom65Img =
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuCd4_sK9F-cp4rBp7llRVrAohIKRYnD1dQUo0euIXuoTR1eXwP9_xB3TWEd7etp0i1xjsUTk1u05WPBPj5UZFyf87g1nm4MForPE7Zc2EF1x4i5iuS_sNCsbo-Vwkznebj2HSVHGT0dSNqe-puABiDrrIaK3TplSLwgQz2SFUm6GFVvmgSzqYRIxfmmacOD6KO81hcpR5esvrKQS5VN85kG1Wy3mzHiMMg4TC0HcJBJ9r2rRYX5zVmmaGeGpjGsHRmf-zfqvWkeMYY";
-
-const targa63Img =
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuDkmf9l3euQKVuLnGlMauWKnUvsFM7OXvtXoR9hiQi0twi8yZTFYArgyE9i2OGy2Ej-NZxaLn6dI6at8g1SGVlglfc_nPFytQPmrw7JbwRtrwHijDMmEPvKVG6Pf18TSKM-fRmXp689_TDKvNsG8FNsXphDup99lrAHVitRMEBckQBBlaxD1W8sCqgEJ7idtkf2z61khxRuz2QjtN0BQfHWNWr5tLtiMs8XCylF-LkLGOxSmmohjnWSodQjXZcbjZ8onCy1wpzAP5I";
-
-const squadron68Img =
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuDaBb-recNpR1aF8Ie6rS15u4i_4WjeEP164XnHyf2PwgreoAnQbrJV-nphf-wroPJLAUMoWUB6yf3b0zHgta5E4MhC6FrbLM6NOTOjg0KDu0il24O9xCdJqps3_iLv25ljvsy3v58pS7LZ5eBzUGfzLLiNkaTpQ0oFtaID_2zkoVU6_V5xaWCO8RbtknHXXKo4FKGMeptrSO1ngvxeY1MsjTsXx0bAY0Ng0I-XyhKymCd-tiQENlydknruYUgcgqAhCUAcgSBvhf4";
-
-const phantom50Img =
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuApDjO62yJBMsUFScYJMe0BLzu-2gVSK2cIL1wMUB5gj04lmc8bCr-ic1vARw-GLdDyi4g6b_N1mrtL9QyRDfkNrr52dstrtRNc0nrsnlJqwiR70CHGiDyDyFpPZU_k0Meo73u2gKxs9hn6Zkr8iT6htlhRuztWX4bqhJHW6LdxDNRc0j0Ouaky-s0Xb7vOomA95Tx4eQMI9uTdn5WzEf26cxMWNBE2ESxfY6iR2DC2lQlGyFourhkFTrKg3kTbTPTtVDQ1cglg2Ac";
+const phantom50Img = "https://cdn.callersiq.com/inventory_uploads/attachment-1724943667191627881966d08d33ea710.jpg";
 
 export default function Fairline() {
   return (

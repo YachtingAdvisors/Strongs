@@ -16,7 +16,16 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img alt="Luxury yacht on open water" className="w-full h-full object-cover" src={heroImg} />
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            poster={heroImg}
+            className="w-full h-full object-cover"
+          >
+            <source src="/hero-video.mp4" type="video/mp4" />
+          </video>
           <div className="absolute inset-0 hero-gradient" />
         </div>
         <div className="relative z-10 text-center px-6 max-w-5xl">

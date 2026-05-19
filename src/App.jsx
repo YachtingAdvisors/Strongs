@@ -8,6 +8,7 @@ import ShopYachts from "@/pages/ShopYachts";
 import VesselDetail from "@/pages/VesselDetail";
 import Cruisers from "@/pages/Cruisers";
 import Fairline from "@/pages/Fairline";
+import ModelPage from "@/pages/ModelPage";
 
 function ScrollToTop({ children }) {
   const { pathname } = useLocation();
@@ -27,10 +28,11 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/pearl-yachts" element={<PearlYachts />} />
-          <Route path="/shop" element={<ShopYachts />} />
-          <Route path="/vessel/:id" element={<VesselDetail />} />
           <Route path="/cruisers" element={<Cruisers />} />
           <Route path="/fairline" element={<Fairline />} />
+          <Route path="/model/:slug" element={<ModelPage />} />
+          <Route path="/shop" element={<ShopYachts />} />
+          <Route path="/vessel/:id" element={<VesselDetail />} />
         </Routes>
         <Footer />
       </ScrollToTop>

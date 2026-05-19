@@ -1,90 +1,21 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { SlidersHorizontal, ChevronDown, ArrowRight } from "lucide-react";
+import { SlidersHorizontal, ChevronDown, ArrowRight, Loader2, Wifi, WifiOff } from "lucide-react";
+import useYapListings from "@/hooks/useYapListings";
 
-const listings = [
-  {
-    id: "fairline-phantom-65",
-    title: "2024 Fairline Phantom 65",
-    price: "Contact for Price",
-    length: "65 ft",
-    year: 2024,
-    make: "Fairline",
-    cabins: 3,
-    engine: "Twin Volvo Penta IPS 1200",
-    condition: "New",
-    img: "https://cdn.callersiq.com/inventory_uploads/attachment-1724943670109438022866d08d36da501.jpg",
-    hasDetail: true,
-  },
-  {
-    id: "pearl-82",
-    title: "2024 Pearl 82",
-    price: "$4,200,000",
-    length: "82 ft",
-    year: 2024,
-    make: "Pearl",
-    cabins: 4,
-    engine: "Twin MAN V12",
-    condition: "New",
-    img: "https://cdn.mdsbrand.com/mean-strongs-marine/yacht-buyer/yacht-buyer-img-8.webp",
-  },
-  {
-    id: "sunseeker-65",
-    title: "2023 Sunseeker Predator 65",
-    price: "$2,850,000",
-    length: "65 ft",
-    year: 2023,
-    make: "Sunseeker",
-    cabins: 3,
-    engine: "Twin MTU M96L",
-    condition: "Pre-Owned",
-    img: "https://images.boatsgroup.com/images/1/6/54/2016-sunseeker-manhattan-65-power-9560654-20240925074526805-1_XLARGE.jpg",
-  },
-  {
-    id: "azimut-50",
-    title: "2024 Azimut 50 Flybridge",
-    price: "$1,950,000",
-    length: "50 ft",
-    year: 2024,
-    make: "Azimut",
-    cabins: 3,
-    engine: "Twin Volvo Penta D8",
-    condition: "New",
-    img: "https://images.boatsgroup.com/images/1/98/23/2015-azimut-atlantis-50-power-10089823-20260220141926958-1.jpg",
-  },
-  {
-    id: "princess-v55",
-    title: "2024 Princess V55",
-    price: "$1,750,000",
-    length: "55 ft",
-    year: 2024,
-    make: "Princess",
-    cabins: 3,
-    engine: "Twin Volvo Penta IPS 950",
-    condition: "New",
-    img: "https://images.boatsgroup.com/images/1/12/58/2017-princess-56-power-10091258-20260223063308309-3.jpg",
-  },
-  {
-    id: "pearl-63",
-    title: "2024 Pearl 63",
-    price: "$2,100,000",
-    length: "63 ft",
-    year: 2024,
-    make: "Pearl",
-    cabins: 3,
-    engine: "Twin Volvo Penta IPS 1050",
-    condition: "New",
-    img: "https://cdn.mdsbrand.com/mean-strongs-marine/yacht-buyer/yacht-buyer-img-7.webp",
-  },
-];
-
-const filters = ["All", "New", "Pre-Owned"];
-const makes = ["All Makes", "Fairline", "Pearl", "Sunseeker", "Azimut", "Princess"];
+const conditionFilters = ["All", "New", "Pre-Owned"];
 
 export default function ShopYachts() {
   const [activeFilter, setActiveFilter] = useState("All");
   const [activeMake, setActiveMake] = useState("All Makes");
+
+  const { listings, loading, source } = useYapListings();
+
+  const makes = useMemo(() => {
+    const uniqueMakes = [...new Set(listings.map((l) => l.make).filter(Boolean))].sort();
+    return ["All Makes", ...uniqueMakes];
+  }, [listings]);
 
   const filtered = listings.filter((l) => {
     if (activeFilter !== "All" && l.condition !== activeFilter) return false;
@@ -94,7 +25,6 @@ export default function ShopYachts() {
 
   return (
     <main className="pt-24">
-      {/* Header */}
       <section className="px-6 md:px-12 py-16 md:py-24 bg-on-primary-fixed">
         <div className="max-w-7xl mx-auto">
           <span className="text-secondary font-label font-bold tracking-widest text-xs uppercase mb-4 block">Inventory</span>
@@ -102,17 +32,27 @@ export default function ShopYachts() {
             Shop Yachts
           </h1>
           <p className="text-white/60 text-lg mt-6 max-w-xl">
-            Browse our curated collection of new and pre-owned luxury vessels. 50–88 ft range available.
+            Browse our curated collection of new and pre-owned luxury vessels. 50-88 ft range available.
           </p>
+          <div className="flex items-center gap-2 mt-4">
+            {source === "yap" ? (
+              <span className="inline-flex items-center gap-1.5 text-emerald-400 text-[10px] font-label uppercase tracking-widest">
+                <Wifi className="w-3 h-3" /> Live from YAP
+              </span>
+            ) : source === "fallback" ? (
+              <span className="inline-flex items-center gap-1.5 text-amber-400 text-[10px] font-label uppercase tracking-widest">
+                <WifiOff className="w-3 h-3" /> Cached Inventory
+              </span>
+            ) : null}
+          </div>
         </div>
       </section>
 
-      {/* Filters */}
       <section className="px-6 md:px-12 py-8 bg-surface border-b border-outline-variant/30 sticky top-24 z-40 glass-nav">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
           <div className="flex items-center gap-3 flex-wrap">
             <SlidersHorizontal className="w-4 h-4 text-on-surface-variant" />
-            {filters.map((f) => (
+            {conditionFilters.map((f) => (
               <button
                 key={f}
                 onClick={() => setActiveFilter(f)}
@@ -141,46 +81,84 @@ export default function ShopYachts() {
         </div>
       </section>
 
-      {/* Grid */}
       <section className="px-6 md:px-12 py-16 bg-surface">
         <div className="max-w-7xl mx-auto">
-          <p className="text-on-surface-variant text-sm mb-8">{filtered.length} vessels found</p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filtered.map((yacht) => (
-              <div key={yacht.id} className="group bg-surface-container-low rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-500">
-                <div className="aspect-[4/3] overflow-hidden relative">
-                  <img alt={yacht.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src={yacht.img} />
-                  <span className={`absolute top-4 left-4 px-3 py-1.5 rounded text-[10px] font-bold uppercase tracking-widest shadow-md ${
-                    yacht.condition === "New" ? "bg-secondary text-white" : "bg-on-primary-fixed text-white"
-                  }`}>
-                    {yacht.condition}
-                  </span>
-                </div>
-                <div className="p-6">
-                  <h3 className="font-headline text-xl font-bold text-on-surface mb-1">{yacht.title}</h3>
-                  <p className="text-secondary font-headline font-bold text-lg mb-4">{yacht.price}</p>
-                  <div className="grid grid-cols-2 gap-2 text-xs text-on-surface-variant font-label mb-6">
-                    <span>Length: {yacht.length}</span>
-                    <span>Cabins: {yacht.cabins}</span>
-                    <span className="col-span-2">Engine: {yacht.engine}</span>
-                  </div>
-                  {yacht.hasDetail ? (
-                    <Link to={`/vessel/${yacht.id}`}>
-                      <Button className="w-full bg-on-primary-fixed text-white hover:bg-secondary transition-colors h-auto py-3 text-xs uppercase tracking-widest font-bold">
-                        View Details <ArrowRight className="w-4 h-4 ml-2" />
-                      </Button>
-                    </Link>
-                  ) : (
-                    <Button className="w-full bg-on-primary-fixed text-white hover:bg-secondary transition-colors h-auto py-3 text-xs uppercase tracking-widest font-bold">
-                      Request Info <ArrowRight className="w-4 h-4 ml-2" />
-                    </Button>
-                  )}
-                </div>
+          {loading ? (
+            <div className="flex flex-col items-center justify-center py-32 gap-4">
+              <Loader2 className="w-8 h-8 text-secondary animate-spin" />
+              <p className="text-on-surface-variant text-sm font-label uppercase tracking-widest">Loading inventory...</p>
+            </div>
+          ) : (
+            <>
+              <p className="text-on-surface-variant text-sm mb-8">{filtered.length} vessels found</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {filtered.map((yacht) => (
+                  <YachtCard key={yacht.id} yacht={yacht} />
+                ))}
               </div>
-            ))}
-          </div>
+              {filtered.length === 0 && (
+                <div className="text-center py-20">
+                  <p className="text-on-surface-variant text-lg">No vessels match your current filters.</p>
+                  <button
+                    onClick={() => { setActiveFilter("All"); setActiveMake("All Makes"); }}
+                    className="mt-4 text-secondary font-label text-xs uppercase tracking-widest font-bold"
+                  >
+                    Clear Filters
+                  </button>
+                </div>
+              )}
+            </>
+          )}
         </div>
       </section>
     </main>
+  );
+}
+
+function YachtCard({ yacht }) {
+  const [imgError, setImgError] = useState(false);
+
+  return (
+    <div className="group bg-surface-container-low rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-500">
+      <div className="aspect-[4/3] overflow-hidden relative bg-surface-container-high">
+        {!imgError && yacht.img ? (
+          <img
+            alt={yacht.title}
+            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            src={yacht.img}
+            onError={() => setImgError(true)}
+          />
+        ) : (
+          <div className="w-full h-full flex items-center justify-center">
+            <span className="font-headline text-2xl text-on-surface-variant/30">{yacht.make}</span>
+          </div>
+        )}
+        <span className={`absolute top-4 left-4 px-3 py-1.5 rounded text-[10px] font-bold uppercase tracking-widest shadow-md ${
+          yacht.condition === "New" ? "bg-secondary text-white" : "bg-on-primary-fixed text-white"
+        }`}>
+          {yacht.condition}
+        </span>
+      </div>
+      <div className="p-6">
+        <h3 className="font-headline text-xl font-bold text-on-surface mb-1">{yacht.title}</h3>
+        <p className="text-secondary font-headline font-bold text-lg mb-4">{yacht.price}</p>
+        <div className="grid grid-cols-2 gap-2 text-xs text-on-surface-variant font-label mb-6">
+          {yacht.length && <span>Length: {yacht.length}</span>}
+          {yacht.cabins && <span>Cabins: {yacht.cabins}</span>}
+          {yacht.engine && <span className="col-span-2">Engine: {yacht.engine}</span>}
+        </div>
+        {yacht.hasDetail ? (
+          <Link to={`/vessel/${yacht.id}`}>
+            <Button className="w-full bg-on-primary-fixed text-white hover:bg-secondary transition-colors h-auto py-3 text-xs uppercase tracking-widest font-bold">
+              View Details <ArrowRight className="w-4 h-4 ml-2" />
+            </Button>
+          </Link>
+        ) : (
+          <Button className="w-full bg-on-primary-fixed text-white hover:bg-secondary transition-colors h-auto py-3 text-xs uppercase tracking-widest font-bold">
+            Request Info <ArrowRight className="w-4 h-4 ml-2" />
+          </Button>
+        )}
+      </div>
+    </div>
   );
 }

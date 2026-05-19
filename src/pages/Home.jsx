@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { History, ShieldCheck, MapPin, PlayCircle, Diamond, Wrench, ArrowRight } from "lucide-react";
+import { History, ShieldCheck, MapPin, Diamond, Wrench, ArrowRight, Play } from "lucide-react";
+import { useState } from "react";
 
 // Real images from manufacturer websites and Strong's Marine CDN
 const heroImg = "https://www.pearlyachts.com/wp-content/uploads/2025/02/home-slide-01.jpg";
@@ -8,7 +9,7 @@ const yacht1 = "https://www.pearlyachts.com/wp-content/uploads/2024/11/Pearl-82-
 const yacht2 = "https://image.yachtbuyer.com/w1920/h1280/qh/ca/m6/k1aee8d80/model/photo/2033792.jpg"; // Fairline
 const yacht4 = "https://www.cruisersyachts.com/-/media/images/cruisers-yatchs/cards/1-2-col-card-row/gls-hp-card.jpg"; // Cruisers
 const pearlInterior = "https://www.pearlyachts.com/wp-content/uploads/2026/01/Pearl-73_Aft_Cockpit_Coffee-table.jpg";
-const droneShot = "https://www.cruisersyachts.com/-/media/images/cruisers-yatchs/og/50-fly-launch-og.jpg";
+const facilityVideo = "https://cdn.mdsbrand.com/mean-strongs-marine/videos/Strong%E2%80%99s+Yacht+Center+%E2%80%94+Expert+Yacht+Service%2C+Storage%2C+%26+More.mp4";
 
 export default function Home() {
   return (
@@ -16,16 +17,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            poster={heroImg}
-            className="w-full h-full object-cover"
-          >
-            <source src="/hero-video.mp4" type="video/mp4" />
-          </video>
+          <img alt="Pearl yacht on open water" src={heroImg} className="w-full h-full object-cover" />
           <div className="absolute inset-0 hero-gradient" />
         </div>
         <div className="relative z-10 text-center px-6 max-w-5xl">
@@ -124,6 +116,9 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Facility Video — Trust Builder */}
+      <FacilityVideo />
+
       {/* Expert Brokerage */}
       <section className="py-24 md:py-32 bg-surface-container-low">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
@@ -139,22 +134,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Digital Concierge */}
-      <section className="py-24 md:py-32 relative group cursor-pointer overflow-hidden">
-        <div className="absolute inset-0 bg-on-primary-fixed group-hover:scale-105 transition-transform duration-1000">
-          <img alt="Yacht from above" className="w-full h-full object-cover opacity-40" src={droneShot} />
-        </div>
-        <div className="relative z-10 max-w-4xl mx-auto text-center px-6">
-          <h2 className="font-headline text-4xl md:text-6xl font-bold text-white tracking-tighter mb-8">Virtual Tours. Real Depth.</h2>
-          <p className="text-white/80 text-xl font-light mb-12">
-            Can't make it to the marina? Explore our fleet with high-definition virtual walkthroughs and cinematic drone previews.
-          </p>
-          <button className="bg-white text-on-primary-fixed px-12 py-6 rounded-full font-bold uppercase tracking-widest text-xs flex items-center gap-4 mx-auto hover:bg-secondary hover:text-white transition-all group-hover:scale-110">
-            <PlayCircle className="w-6 h-6" />
-            Launch Digital Concierge
-          </button>
-        </div>
-      </section>
     </main>
   );
 }
@@ -188,6 +167,67 @@ function FeatureItem({ icon, title, desc }) {
         <p className="text-white/50 text-sm">{desc}</p>
       </div>
     </div>
+  );
+}
+
+function FacilityVideo() {
+  const [playing, setPlaying] = useState(false);
+
+  return (
+    <section className="py-24 md:py-32 bg-on-primary-fixed relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 md:px-12">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16 items-center">
+          <div className="md:col-span-5 text-white">
+            <span className="text-secondary font-label font-bold tracking-widest text-xs uppercase mb-6 block">
+              Our Facility
+            </span>
+            <h2 className="font-headline text-4xl md:text-5xl font-bold tracking-tighter leading-tight mb-8">
+              See Strong's Yacht Center in Action.
+            </h2>
+            <p className="text-white/60 text-lg font-light leading-relaxed mb-8">
+              Expert yacht service, secure storage, and full-service marine support — all under one roof on the Long Island Sound. Nearly 80 years of trust, built one vessel at a time.
+            </p>
+            <div className="flex items-center gap-6 text-white/40 text-sm font-label">
+              <span className="flex items-center gap-2"><ShieldCheck className="w-4 h-4 text-secondary" /> Full-Service Yard</span>
+              <span className="flex items-center gap-2"><MapPin className="w-4 h-4 text-secondary" /> Long Island, NY</span>
+            </div>
+          </div>
+          <div className="md:col-span-7">
+            <div className="relative aspect-video rounded-lg overflow-hidden shadow-2xl bg-black group">
+              <video
+                id="facility-video"
+                muted
+                loop
+                playsInline
+                poster={heroImg}
+                className="w-full h-full object-cover"
+                onClick={() => {
+                  const v = document.getElementById("facility-video");
+                  if (v.paused) { v.play(); setPlaying(true); }
+                  else { v.pause(); setPlaying(false); }
+                }}
+              >
+                <source src={facilityVideo} type="video/mp4" />
+              </video>
+              {!playing && (
+                <div
+                  className="absolute inset-0 flex items-center justify-center cursor-pointer bg-black/30 group-hover:bg-black/20 transition-colors"
+                  onClick={() => {
+                    const v = document.getElementById("facility-video");
+                    v.play();
+                    setPlaying(true);
+                  }}
+                >
+                  <div className="w-20 h-20 rounded-full bg-white/90 flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform">
+                    <Play className="w-8 h-8 text-on-primary-fixed ml-1" />
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }
 

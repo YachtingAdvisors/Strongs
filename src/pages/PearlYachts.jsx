@@ -1,17 +1,50 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Loader2 } from "lucide-react";
+import useMicrolinkImages from "@/hooks/useMicrolinkImages";
 
-const heroImg = "https://www.pearlyachts.com/wp-content/uploads/2025/02/home-slide-01.jpg";
-const atelierImg = "https://www.pearlyachts.com/wp-content/uploads/2025/02/home-slide-02.jpg";
-const pearl100 = "https://www.pearlyachts.com/wp-content/uploads/2025/02/home-slide-03.jpg";
-const pearl63 = "https://www.pearlyachts.com/wp-content/uploads/2025/02/63-barca.png";
-const pearl82 = "https://www.pearlyachts.com/wp-content/uploads/2024/11/Pearl-82-Running-2.jpg";
-const pearl73 = "https://www.pearlyachts.com/wp-content/uploads/2026/01/Pearl-73_Exterior_Side.jpg";
-const engineImg = "https://www.pearlyachts.com/wp-content/uploads/2020/12/PEARL-82-DRONE-203.jpeg";
+const PEARL_URLS = [
+  "https://www.pearlyachts.com/pearl-100/",
+  "https://www.pearlyachts.com/pearl-82/",
+  "https://www.pearlyachts.com/pearl-72/",
+  "https://www.pearlyachts.com/pearl-62/",
+];
+
+const PEARL_FALLBACKS = [
+  "https://www.pearlyachts.com/wp-content/uploads/2025/02/home-slide-03.jpg",
+  "https://www.pearlyachts.com/wp-content/uploads/2024/11/Pearl-82-Running-2.jpg",
+  "https://www.pearlyachts.com/wp-content/uploads/2026/01/Pearl-73_Exterior_Side.jpg",
+  "https://www.pearlyachts.com/wp-content/uploads/2025/02/63-barca.png",
+];
+
+const GALLERY_URLS = [
+  "https://www.pearlyachts.com/the-atelier/",
+  "https://www.pearlyachts.com/designers/",
+  "https://www.pearlyachts.com/pearl-82/interior-design/",
+];
+
+const GALLERY_FALLBACKS = [
+  "https://www.pearlyachts.com/wp-content/uploads/2025/02/home-slide-02.jpg",
+  "https://www.pearlyachts.com/wp-content/uploads/2025/02/home-slide-01.jpg",
+  "https://www.pearlyachts.com/wp-content/uploads/2020/12/PEARL-82-DRONE-203.jpeg",
+];
+
+const models = [
+  { slug: "pearl-100", title: "Pearl 100 Hybrid", sub: "The Sustainable Flagship", className: "md:col-span-8", h: "h-[500px] md:h-[600px]", showBtn: true },
+  { slug: "pearl-82", title: "Pearl 82", sub: "The New Standard", className: "md:col-span-4", h: "h-[500px] md:h-[600px]" },
+  { slug: "pearl-72", title: "Pearl 72", sub: "Artisanal Balance", className: "md:col-span-5", h: "h-[400px] md:h-[500px]" },
+  { slug: "pearl-62", title: "Pearl 62", sub: "Agile Sophistication", className: "md:col-span-7", h: "h-[400px] md:h-[500px]" },
+];
 
 export default function PearlYachts() {
+  const { images: modelImages, loading: modelsLoading } = useMicrolinkImages(PEARL_URLS, PEARL_FALLBACKS);
+  const { images: galleryImages } = useMicrolinkImages(GALLERY_URLS, GALLERY_FALLBACKS);
+
+  const heroImg = galleryImages[1]?.src || GALLERY_FALLBACKS[1];
+  const atelierImg = galleryImages[0]?.src || GALLERY_FALLBACKS[0];
+  const engineImg = galleryImages[2]?.src || GALLERY_FALLBACKS[2];
+
   return (
     <main className="pt-24">
       {/* Hero */}
@@ -19,16 +52,24 @@ export default function PearlYachts() {
         <img alt="Pearl Yacht sailing" className="absolute inset-0 w-full h-full object-cover" src={heroImg} />
         <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
         <div className="absolute bottom-20 left-6 md:left-12 max-w-2xl">
+          <p className="font-label text-white/60 text-xs uppercase tracking-[0.4em] mb-4">
+            The Atelier of Yachting
+          </p>
           <h1 className="text-white font-headline text-5xl md:text-8xl font-extrabold tracking-tighter leading-tight">
             Beyond The <br />Horizon.
           </h1>
           <p className="text-white/80 font-body text-lg mt-6 max-w-lg leading-relaxed">
-            Introducing the 2024 Collection. A masterclass in nautical architecture and the bespoke "Atelier of Yachting" philosophy.
+            Introducing the 2024 Collection. A masterclass in nautical architecture and bespoke craftsmanship by Kelly Hoppen CBE and Bill Dixon.
           </p>
+          <Link to="/shop">
+            <Button className="mt-10 bg-pearl-primary hover:bg-pearl-primary-container text-white rounded-none px-8 py-3 font-label text-xs uppercase tracking-widest">
+              Browse Pearl Inventory <ArrowRight className="ml-2 w-4 h-4" />
+            </Button>
+          </Link>
         </div>
       </section>
 
-      {/* Philosophy: The Atelier */}
+      {/* Philosophy */}
       <section className="py-24 md:py-32 px-6 md:px-12 bg-surface">
         <div className="max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-16 items-center">
           <div className="md:col-span-5">
@@ -50,13 +91,13 @@ export default function PearlYachts() {
             </div>
             <div className="hidden md:block absolute -bottom-12 -left-12 glass-panel p-8 max-w-xs rounded-lg shadow-2xl">
               <p className="font-headline italic text-xl text-pearl-primary">"Design is not just what it looks like, it's how it feels on the water."</p>
-              <p className="mt-4 font-label text-[10px] uppercase tracking-widest text-on-surface-variant">— Bill Dixon, Naval Architect</p>
+              <p className="mt-4 font-label text-[10px] uppercase tracking-widest text-on-surface-variant">-- Bill Dixon, Naval Architect</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* The Collection Grid */}
+      {/* Model Collection */}
       <section className="py-24 md:py-32 bg-surface-container-low">
         <div className="px-6 md:px-12 max-w-screen-2xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-end mb-16 md:mb-20">
@@ -68,16 +109,26 @@ export default function PearlYachts() {
               <p className="text-on-surface-variant text-sm italic">Engineered for performance. Styled for the elite.</p>
             </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
-            <ModelCard className="md:col-span-8" h="h-[500px] md:h-[600px]" img={pearl100} title="Pearl 100 Hybrid" sub="The Sustainable Flagship" showBtn />
-            <ModelCard className="md:col-span-4" h="h-[500px] md:h-[600px]" img={pearl63} title="Pearl 63" sub="Agile Sophistication" />
-            <ModelCard className="md:col-span-5" h="h-[400px] md:h-[500px]" img={pearl82} title="Pearl 82" sub="The New Standard" />
-            <ModelCard className="md:col-span-7" h="h-[400px] md:h-[500px]" img={pearl73} title="Pearl 73" sub="Artisanal Balance" />
-          </div>
+
+          {modelsLoading ? (
+            <div className="flex justify-center py-20">
+              <Loader2 className="w-8 h-8 text-pearl-primary animate-spin" />
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
+              {models.map((m, i) => (
+                <ModelCard
+                  key={m.title}
+                  {...m}
+                  img={modelImages[i]?.src || PEARL_FALLBACKS[i]}
+                />
+              ))}
+            </div>
+          )}
         </div>
       </section>
 
-      {/* Performance Specs */}
+      {/* Performance */}
       <section className="py-24 md:py-32 px-6 md:px-12 bg-white">
         <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row items-center gap-16 md:gap-20">
           <div className="w-full md:w-1/2">
@@ -92,6 +143,25 @@ export default function PearlYachts() {
           <div className="w-full md:w-1/2 aspect-square rounded-full border border-pearl-primary/10 p-8 md:p-12 flex items-center justify-center relative overflow-hidden">
             <div className="absolute inset-0 bg-surface-container opacity-20" />
             <img alt="Yacht engineering" className="w-full h-full object-cover rounded-full mix-blend-multiply opacity-80" src={engineImg} />
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-24 md:py-32 bg-on-primary-fixed text-white">
+        <div className="max-w-screen-md mx-auto text-center px-6 md:px-12">
+          <h2 className="font-headline text-4xl md:text-5xl mb-6">
+            Experience Pearl at Strong's Yachts
+          </h2>
+          <p className="text-white/50 text-lg mb-12 max-w-md mx-auto leading-relaxed">
+            Tour the full Pearl collection in person, schedule a sea trial, or speak with our team about configuring your bespoke vessel.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link to="/shop">
+              <Button className="bg-pearl-primary hover:bg-pearl-primary-container text-white rounded-none px-10 py-3 font-label text-xs uppercase tracking-widest">
+                Browse Inventory
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -117,21 +187,21 @@ export default function PearlYachts() {
   );
 }
 
-function ModelCard({ className, h, img, title, sub, showBtn }) {
+function ModelCard({ className, h, img, title, sub, showBtn, slug }) {
   return (
-    <div className={`${className} group relative overflow-hidden ${h} rounded-lg`}>
+    <Link to={`/model/${slug}`} className={`${className} group relative overflow-hidden ${h} rounded-lg block`}>
       <img alt={title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src={img} />
       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
       <div className="absolute bottom-8 md:bottom-10 left-8 md:left-10 text-white">
         <h3 className="font-headline text-3xl md:text-4xl font-bold">{title}</h3>
         <p className="font-label uppercase tracking-widest text-xs mt-2 opacity-80">{sub}</p>
         {showBtn && (
-          <button className="mt-8 px-6 py-2 border border-white/30 hover:bg-white hover:text-pearl-primary transition-all text-xs uppercase tracking-widest font-bold">
+          <span className="mt-8 inline-block px-6 py-2 border border-white/30 hover:bg-white hover:text-pearl-primary transition-all text-xs uppercase tracking-widest font-bold">
             Explore Model
-          </button>
+          </span>
         )}
       </div>
-    </div>
+    </Link>
   );
 }
 
